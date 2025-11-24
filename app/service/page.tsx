@@ -26,7 +26,7 @@ const SERVICES = [
     img: "/images/sparepart.jpg",
   },
   {
-    title: "Purchase of Used Equipment",
+    title: "Purchase of Used Equipments",
     desc: "We procure high-quality used and surplus industrial equipment, including generators and turbines, offering cost savings without compromising on quality. Our team assesses condition and provides fair offers for your decommissioned assets.",
     img: "/images/equipments.png",
   },
@@ -69,9 +69,11 @@ export default function Services() {
               color: theme.palette.text.secondary,
               px: isMobile ? 0 : 35,
             }}>
-            Comprehensive solutions for your industrial equipment needs,
-            specializing in spare parts for generators and turbines with turnkey
-            procurement and custom selection.
+            Turnkey procurement of equipment and components for industrial
+            projects. Assistance with customs clearance and international
+            documentation. Structuring of secure contracts and agency agreements
+            to reduce legal and financial risks. Handling of international
+            payments with clear reporting.
           </Typography>
         </motion.div>
         {SERVICES.map((service, index) => (

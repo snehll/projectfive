@@ -17,8 +17,8 @@ export default function CustomThemeProvider({
         palette: {
           mode,
           primary: {
-            main: "#8B6F47", // Light brown
-            dark: "#5A4A31", // Darker brown for footer
+            main: "#B8E1FF", // Light brown
+            dark: "#82ABA1", // Darker brown for footer
           },
           secondary: {
             main: "#FFFFFF", // White

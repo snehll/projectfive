@@ -47,7 +47,7 @@ const SERVICES = [
   },
   {
     title: "Logistics",
-    desc: "Comprehensive solutions for your industrial needs.",
+    desc: "Optimised sea, road and air transport with continuous visibility. Insurance and careful handling ensure cargo arrives safely and on schedule.",
     img: "/images/logistics.jpg",
   },
 ];
@@ -114,14 +114,27 @@ export default function Home() {
           <Typography variant="h4" align="center" gutterBottom>
             About Us
           </Typography>
-          <Grid sx={{mt:5}} container spacing={2}>
+          <Grid sx={{ mt: 5 }} container spacing={2}>
             <Grid
               sx={{ display: isMobile ? "block" : "none" }}
               width={isMobile ? 6 / 6 : 2 / 6}>
               <Typography paragraph align="justify">
-                Argenta 3D Teknoloji specializes in spare parts and equipment
-                for generators and turbines, partnering with top brands like
-                Caterpillar and Cummins to serve over 100 countries.
+                From its beginning in 2007 the company has held a simple belief:
+                technology can make global trade smoother and more predictable.
+                What started as a small operation has grown into a platform that
+                connects trusted manufacturers with industrial clients, enabling
+                faster and more transparent deliveries across more than thirty
+                jurisdictions. Over the years this approach has turned
+                complexity into clarity, giving customers the confidence that
+                their equipment will arrive on time and ready to perform. Behind
+                the technology is a team that understands both the technical and
+                the human side of logistics. They combine digital tracking with
+                multilingual expertise and modern compliance tools, but just as
+                important, they bring attention to detail and responsibility for
+                every shipment. It is this balance of innovation and
+                accountability that keeps projects on course and allows the
+                company to build long-term partnerships with clients around the
+                world.
               </Typography>
             </Grid>
             <Grid width={isMobile ? 6 / 6 : 3 / 6}>
@@ -136,17 +149,36 @@ export default function Home() {
                 variant="outlined"
                 component={Link}
                 href="/contact?topic=about"
-                sx={{ display: "block", mx: "auto", mt: 2 }}>
-                Contact for More Info
+                sx={{
+                  display: "block",
+                  mx: "auto",
+                  mt: 2,
+                  borderColor: theme.palette.primary.dark,
+                  color: theme.palette.primary.dark,
+                }}>
+                Get Started
               </Button>
             </Grid>
             <Grid
               sx={{ display: !isMobile ? "block" : "none" }}
               width={isMobile ? 6 / 6 : 2 / 6}>
               <Typography paragraph align="justify">
-                Argenta 3D Teknoloji specializes in spare parts and equipment
-                for generators and turbines, partnering with top brands like
-                Caterpillar and Cummins to serve over 100 countries.
+                From its beginning in 2007 the company has held a simple belief:
+                technology can make global trade smoother and more predictable.
+                What started as a small operation has grown into a platform that
+                connects trusted manufacturers with industrial clients, enabling
+                faster and more transparent deliveries across more than thirty
+                jurisdictions. Over the years this approach has turned
+                complexity into clarity, giving customers the confidence that
+                their equipment will arrive on time and ready to perform. Behind
+                the technology is a team that understands both the technical and
+                the human side of logistics. They combine digital tracking with
+                multilingual expertise and modern compliance tools, but just as
+                important, they bring attention to detail and responsibility for
+                every shipment. It is this balance of innovation and
+                accountability that keeps projects on course and allows the
+                company to build long-term partnerships with clients around the
+                world.
               </Typography>
             </Grid>
           </Grid>
@@ -163,7 +195,7 @@ export default function Home() {
           <Typography variant="h4" align="center" gutterBottom>
             Our Services
           </Typography>
-          <Grid sx={{mt:5}} container spacing={2}>
+          <Grid sx={{ mt: 5 }} container spacing={2}>
             {SERVICES.map((service, i) => (
               <Grid key={i}>
                 <Link href="/service" passHref>
@@ -173,6 +205,7 @@ export default function Home() {
                       cursor: "pointer",
                       transition: "transform 0.3s",
                       "&:hover": { transform: "scale(1.05)" },
+                      // maxWidth: 300,
                     }}>
                     <Box
                       sx={{ height: { xs: 150, sm: 200 }, overflow: "hidden" }}>
@@ -190,7 +223,9 @@ export default function Home() {
                     </Box>
                     <CardContent>
                       <Typography variant="h6">{service.title}</Typography>
-                      <Typography variant="body2">{service.desc}</Typography>
+                      <Typography variant="body2" maxWidth={320}>
+                        {service.desc}
+                      </Typography>
                     </CardContent>
                   </Card>
                 </Link>
@@ -201,8 +236,14 @@ export default function Home() {
             variant="outlined"
             component={Link}
             href="/contact?topic=services"
-            sx={{ display: "block", mx: "auto", mt: 2 }}>
-            Contact for Services
+            sx={{
+              display: "block",
+              mx: "auto",
+              mt: 2,
+              borderColor: theme.palette.primary.dark,
+              color: theme.palette.primary.dark,
+            }}>
+            Get Started
           </Button>
         </motion.div>
       </Container>
@@ -214,11 +255,13 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}>
           <Typography variant="h4" align="center" gutterBottom>
-            Equipment
+            Equipments
           </Typography>
-          <Typography sx={{my:3}} paragraph align="center">
-            Generators, turbines, engines, compressors, and more from trusted
-            global brands.
+          <Typography sx={{ my: 3 }} paragraph align="center">
+            High performance generators, advanced compressor units, pumping
+            systems, drying technology and a broad selection of spare parts from
+            leading brands. Every shipment includes inspection reports and
+            certifications.
           </Typography>
           <Slider {...sliderSettings}>
             {EQUIPMENT.map((equip, i) => (
@@ -259,8 +302,14 @@ export default function Home() {
             variant="outlined"
             component={Link}
             href="/contact?topic=equipment"
-            sx={{ display: "block", mx: "auto", mt: 5 }}>
-            Contact for Equipment
+            sx={{
+              display: "block",
+              mx: "auto",
+              mt: 5,
+              borderColor: theme.palette.primary.dark,
+              color: theme.palette.primary.dark,
+            }}>
+            Get Started
           </Button>
         </motion.div>
       </Container>

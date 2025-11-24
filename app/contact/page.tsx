@@ -31,12 +31,57 @@ export default function Contact() {
       ? `Interested in ${topic.charAt(0).toUpperCase() + topic.slice(1)}`
       : "",
     agree: false,
+    companyname: "alfa",
   });
+  const [status, setStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Stub: Send to /api/contact (configure with your email/SMTP later)
-    alert("Form submitted! Check console for demo.");
-    console.log(formData);
+    const data = {
+      email: formData.email,
+      message: formData.message,
+      name: formData.firstName + " " + formData.lastName,
+      service: formData.service,
+      companyname: "alfa",
+    };
+    console.log(data);
+    try {
+      const response = await fetch(
+        "https://email-xi-pearl.vercel.app/api/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const result = await response.json();
+      setStatus(result);
+      alert(result.message); // Matches your original alert-based feedback
+      setFormData({
+        service: topic,
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: topic
+          ? `Interested in ${topic.charAt(0).toUpperCase() + topic.slice(1)}`
+          : "",
+        agree: false,
+        companyname: "alfa",
+      });
+    } catch (error: any) {
+      setStatus({
+        success: false,
+        message: error.message || "Failed to send request",
+      });
+      alert("Error: " + error.message);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,7 +91,6 @@ export default function Contact() {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
-
   return (
     <Box
       sx={{
@@ -68,11 +112,12 @@ export default function Contact() {
               sx={{ display: isMobile ? "none" : "block" }}
               width={isMobile ? 2 / 2 : 1 / 2}>
               <Typography paragraph>
-                Address: 1 Nolu, Bostanci Mahallesi Nasip 2 Nolu Sokak No: 17
-                Ortahisar / Trabzon, Turkey
+                Nolu Bostancı Mah. 4003 Nolu Sk. No:15A,ORTAHİSAR / TRABZON /
+                TÜRKİYE
               </Typography>
-              <Typography paragraph>Phone: +90(538)4439685</Typography>
-              <Typography paragraph>Email: office@argentatek.com</Typography>
+              <Typography paragraph>
+                <b>Email : </b>office@alfa-trend.com.tr
+              </Typography>
             </Grid>
             <Grid width={isMobile ? 2 / 2 : 1 / 2}>
               <Box
@@ -142,7 +187,7 @@ export default function Contact() {
                   label="I confirm I am over 18 and agree to terms"
                 />
                 <Button type="submit" variant="contained">
-                  Send Message
+                  Get started
                 </Button>
               </Box>
             </Grid>
@@ -150,11 +195,12 @@ export default function Contact() {
               sx={{ display: isMobile ? "block" : "none", mt: 5 }}
               width={isMobile ? 2 / 2 : 1 / 2}>
               <Typography paragraph>
-                Address: 1 Nolu, Bostanci Mahallesi Nasip 2 Nolu Sokak No: 17
-                Ortahisar / Trabzon, Turkey
+                Nolu Bostancı Mah. 4003 Nolu Sk. No:15A,ORTAHİSAR / TRABZON /
+                TÜRKİYE
               </Typography>
-              <Typography paragraph>Phone: +90(538)4439685</Typography>
-              <Typography paragraph>Email: office@argentatek.com</Typography>
+              <Typography paragraph>
+                <b>Email : </b>office@alfa-trend.com.tr
+              </Typography>
             </Grid>
           </Grid>
         </motion.div>

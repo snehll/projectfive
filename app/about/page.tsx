@@ -26,42 +26,48 @@ export default function About() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}>
           <Typography variant="h3" align="center" gutterBottom>
-            About Argenta 3D Teknoloji
+            About ALFA TREND
+          </Typography>
+          <Typography
+            paragraph
+            align="center"
+            sx={{ mb: 4, px: isMobile ? 0 : 25 }}>
+            From its beginning in 2007 the company has held a simple belief:
+            technology can make global trade smoother and more predictable. What
+            started as a small operation has grown into a platform that connects
+            trusted manufacturers with industrial clients, enabling faster and
+            more transparent deliveries across more than thirty jurisdictions.
+            Over the years this approach has turned complexity into clarity,
+            giving customers the confidence that their equipment will arrive on
+            time and ready to perform. Behind the technology is a team that
+            understands both the technical and the human side of logistics. They
+            combine digital tracking with multilingual expertise and modern
+            compliance tools, but just as important, they bring attention to
+            detail and responsibility for every shipment. It is this balance of
+            innovation and accountability that keeps projects on course and
+            allows the company to build long-term partnerships with clients
+            around the world.
+          </Typography>
+          <Typography
+            paragraph
+            align="center"
+            sx={{ mb: 4, px: isMobile ? 0 : 25 }}>
+            Its real strength lies in deep knowledge of cross border trade. This
+            expertise makes it possible to source equipment and components
+            according to a client’s technical specifications, take into account
+            industry standards, control quality at every stage and ensure legal
+            clarity of each transaction. The partner network includes leading
+            manufacturers from the United States, Germany, Poland, China, Turkey
+            and other countries, guaranteeing authenticity and consistent
+            product quality.
           </Typography>
           <Typography
             paragraph
             align="center"
             sx={{ mb: 6, px: isMobile ? 0 : 25 }}>
-            We specialize in providing high-quality spare parts and equipment
-            for industrial needs, including generators and turbines. Partnering
-            with renowned manufacturers like Caterpillar, Cummins, and Atlas
-            Copco, we serve over 100 countries with turnkey procurement and
-            custom selection.
-          </Typography>
-          <Typography variant="h3" align="center" gutterBottom>
-            Mission
-          </Typography>
-          <Typography
-            paragraph
-            align="center"
-            sx={{ mb: 6, px: isMobile ? 0 : 25 }}>
-            Our mission is to empower businesses with reliable, cost-effective
-            solutions. From sourcing top-tier equipment to delivering genuine
-            spare parts and offering flexible rentals, we ensure your operations
-            run smoothly. Our experienced team provides diagnostics, after-sales
-            support, and global logistics to meet your unique needs.
-          </Typography>
-          <Typography variant="h3" align="center" gutterBottom>
-            Vision
-          </Typography>
-          <Typography
-            paragraph
-            align="center"
-            sx={{ mb: 6, px: isMobile ? 0 : 25 }}>
-            To be the global leader in industrial equipment solutions,
-            innovating the supply of spare parts for generators, turbines, and
-            more, with seamless turnkey delivery and tailored selections that
-            drive efficiency and sustainability worldwide.
+            Optimised sea, road and air transport with continuous visibility.
+            Insurance and careful handling ensure cargo arrives safely and on
+            schedule.
           </Typography>
         </motion.div>
       </Container>

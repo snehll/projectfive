@@ -14,12 +14,11 @@ import { useState, useEffect } from "react";
 
 // Hero images array (Unsplash placeholders for equipment and services)
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1558618047-3c8c60d98b0c?auto=format&fit=crop&w=2070&q=80",
   "/images/equipments.png",
   "/images/sparepart.jpg",
   "/images/rental.jpg",
   "/images/logistics.jpg",
-  "/images/engines",
+  "/images/engines.jpg",
   "/images/turbines.jpg",
   "/images/compressor.jpg",
   "/images/dryer.jpg",
@@ -48,7 +47,7 @@ const TypingText = ({
   variant,
 }: {
   text: string;
-  variant: "h2" | "h5" | "h6";
+  variant: "h2" | "h5" | "h6" | "h3" | "h4";
 }) => (
   <Typography
     variant={variant}
@@ -111,17 +110,30 @@ export const HeroSection = () => {
         <Container
           sx={{
             textAlign: "center",
-            color: 'white',
+            color: "white",
             position: "relative",
             zIndex: 1,
-            px: { xs: 2, sm: 4, md: 8 },
+            px: { xs: 2, sm: 2, md: 4 },
             flexWrap: "wrap",
             overflowWrap: "break-word",
           }}>
-          <TypingText
-            text="Argenta 3D Teknoloji"
-            variant={isMobile ? "h5" : "h2"}
-          />
+          {isMobile ? (
+            <TypingText
+              text="ALFA TREND OTOMOTIV TEKNOLOJI INŞAAT ULUSLARARASI TiCARET LIMITED ŞİRKETİ"
+              variant={isMobile ? "h5" : "h3"}
+            />
+          ) : (
+            <>
+              <TypingText
+                text="ALFA TREND OTOMOTIV TEKNOLOJI INŞAAT"
+                variant={isMobile ? "h5" : "h3"}
+              />
+              <TypingText
+                text="ULUSLARARASI TiCARET LIMITED ŞİRKETİ"
+                variant={isMobile ? "h5" : "h3"}
+              />
+            </>
+          )}
           <TypingText
             text="Your trusted partner for industrial equipment and spare parts, delivering efficiency worldwide."
             variant={isMobile ? "h6" : "h5"}

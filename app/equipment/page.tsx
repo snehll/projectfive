@@ -76,9 +76,14 @@ export default function Equipment() {
           <Typography variant="h3" align="center" gutterBottom>
             Our Equipment
           </Typography>
-          <Typography paragraph align="center" sx={{ mb: 6 }}>
-            High-quality generators, engines, compressors, and pumps from
-            trusted global brands.
+          <Typography
+            paragraph
+            align="center"
+            sx={{ mb: 6, px: isMobile ? 0 : 35 }}>
+            High performance generators, advanced compressor units, pumping
+            systems, drying technology and a broad selection of spare parts from
+            leading brands. Every shipment includes inspection reports and
+            certifications.
           </Typography>
         </motion.div>
         <Grid container spacing={4}>
