@@ -54,6 +54,31 @@ const EQUIPMENT = [
     desc: "Pre-packaged kits for generators, turbines, engines, and compressors, ensuring quick maintenance and lifecycle support.",
     img: "/images/sparepart.jpg",
   },
+  {
+    title: "Adaptive Mixers",
+    desc: "Advanced mixing solutions that adjust to process conditions for optimal performance.",
+    img: "/images/adaptivemixer.webp",
+  },
+  {
+    title: "Hydro-Ejectors",
+    desc: "High-performance ejectors for fluid handling and vacuum creation in industrial processes.",
+    img: "/images/hydro-ejectors.webp",
+  },
+  {
+    title: "Jet Mixers",
+    desc: "Efficient mixing using high-velocity jets, suitable for large tanks and complex fluids.",
+    img: "/images/jet-mixers.webp",
+  },
+  {
+    title: "Mixing Accessories",
+    desc: "Essential components and upgrades for enhancing mixing operations and equipment longevity.",
+    img: "/images/mixing-accessories.webp",
+  },
+  {
+    title: "Single Speed Mixers",
+    desc: "Reliable, fixed-speed mixing equipment for consistent and stable industrial applications.",
+    img: "/images/single-speed-mixer.webp",
+  },
 ];
 
 export default function Equipment() {
