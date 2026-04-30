@@ -112,8 +112,8 @@ export default function Contact() {
               sx={{ display: isMobile ? "none" : "block" }}
               width={isMobile ? 2 / 2 : 1 / 2}>
               <Typography paragraph>
-                Nolu Bostancı Mah. 4003 Nolu Sk. No:15A,ORTAHİSAR / TRABZON /
-                TÜRKİYE
+             Kozyatagi Mah. Kaya Sultan Sk. Hayriye Is Merkezi
+No: 83 Ic Kapi No: 3 Kadikoy / ISTANBUL
               </Typography>
               <Typography paragraph>
                 <b>Email : </b>office@alfa-trend.com.tr
@@ -195,8 +195,8 @@ export default function Contact() {
               sx={{ display: isMobile ? "block" : "none", mt: 5 }}
               width={isMobile ? 2 / 2 : 1 / 2}>
               <Typography paragraph>
-                Nolu Bostancı Mah. 4003 Nolu Sk. No:15A,ORTAHİSAR / TRABZON /
-                TÜRKİYE
+                Kozyatagi Mah. Kaya Sultan Sk. Hayriye Is Merkezi
+No: 83 Ic Kapi No: 3 Kadikoy / ISTANBUL
               </Typography>
               <Typography paragraph>
                 <b>Email : </b>office@alfa-trend.com.tr
